@@ -50,6 +50,4 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-# Hi there 👋
-My name is Shevchenko Maria, I am a Russian Content creator and this is my Website
 
