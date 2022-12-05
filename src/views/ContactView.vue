@@ -18,11 +18,15 @@
         <div class="textarea-field">
           <label class="text-field__label" for="username">Message</label>
           <textarea required class="text-field__input text-field__input_valid" v-model=text></textarea>
-          <div class="text-field__message">{{name}}</div>
         </div>
       </div>
       <button type="submit" class="subbtn">Submit</button>
     </form>
+  </div>
+  <div class="output" :class="hidden ? 'hidden' : ''">
+    <h2>{{name}} thank you for reaching out!</h2>
+    <p>I'll get back to you as soon as possible</p>
+    <button id="closeWindow" @click="closeWindow">X</button>
   </div>
 </template>
 
@@ -33,6 +37,7 @@ export default {
   name: "ContactView",
   data() {
     return {
+      hidden:true,
       text: '',
       name: '',
       email: '',
@@ -48,6 +53,10 @@ export default {
       let data = JSON.stringify(email);
       //here we would create email and store it somewhere
       console.log(data);
+      this.hidden = false;
+    },
+    closeWindow(){
+      this.hidden = true;
     }
   }
 }
@@ -187,5 +196,41 @@ form {
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+.output{
+  width: 60%;
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #ecc0b2;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  h2, p{
+    font-family: $mainFont;
+    font-size: 2em;
+  }
+  #closeWindow{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    &:hover{
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+.hidden{
+  display: none;
 }
 </style>
