@@ -1,6 +1,7 @@
 <template>
   <div class="work">
-    <img src="@/assets/portfolio/gif/main.gif" alt="gif">
+    <img src="@/assets/portfolio/gif/main.gif" @load="showGif = true" v-show="showGif" alt="gif">
+    <p v-show="!showGif">Loading...</p>
     <a href="https://drive.google.com/file/d/1Vzv3212yavokEu10fhAXhLIUDcNJMWoZ/view?usp=sharing" target="_blank">
       Take a look at my resume
     </a>
@@ -9,7 +10,12 @@
 
 <script>
 export default {
-  name: "WorkFaceComp"
+  name: "WorkFaceComp",
+  data(){
+    return{
+      showGif: false
+    }
+  }
 }
 </script>
 

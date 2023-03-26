@@ -12,6 +12,7 @@ import WorkBonshe from "@/components/WorkBonshe";
 import WorkProfile from "@/components/WorkProfile";
 import WorkConcept from "@/components/WorkConcept";
 
+
 export default {
   name: "WorkView",
   components: {

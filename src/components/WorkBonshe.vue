@@ -25,7 +25,8 @@
       </div>
     </div>
     <div class="gallery">
-      <img src="@/assets/portfolio/bonshes/1.png" alt="phone" class="phoneImg">
+<!--      <img src="@/assets/portfolio/bonshes/1.png" alt="phone" class="phoneImg">-->
+      <GalleryComp :images="pictures"/>
     </div>
     <div class="tasksLower">
       <h3>My tasks:</h3>
@@ -44,8 +45,22 @@
 </template>
 
 <script>
+import GalleryComp from "@/components/GalleryComp";
 export default {
-  name: "WorkBonshe"
+  name: "WorkBonshe",
+  components:{
+    GalleryComp
+  },
+  data(){
+    return{
+      pictures:[
+        { src: require('@/assets/portfolio/bonshes/1.png'), alt: 'Image 1'},
+        { src: require('@/assets/portfolio/bonshes/2.png'), alt: 'Image 2'},
+        { src: require('@/assets/portfolio/bonshes/3.png'), alt: 'Image 3'},
+        { src: require('@/assets/portfolio/bonshes/4.png'), alt: 'Image 4'}
+      ]
+    }
+  }
 }
 </script>
 
@@ -86,9 +101,7 @@ export default {
     }
   }
   .gallery{
-    .phoneImg{
       width: 400px;
-    }
   }
   .logo{
     position: absolute;
