@@ -2,7 +2,7 @@
   <div class="work">
     <img src="@/assets/portfolio/gif/main.gif" @load="showGif = true" v-show="showGif" alt="gif">
     <p v-show="!showGif">Loading...</p>
-    <a href="https://drive.google.com/file/d/1Vzv3212yavokEu10fhAXhLIUDcNJMWoZ/view?usp=sharing" target="_blank">
+    <a href="https://drive.google.com/file/d/16L8IK5c5ThqbNTN72LaSg5LEU4jYxccO/view?usp=sharing" target="_blank">
       Take a look at my resume
     </a>
   </div>

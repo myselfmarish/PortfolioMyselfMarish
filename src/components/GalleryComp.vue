@@ -25,7 +25,7 @@ export default {
     return {
       activeIndex: 0,
       intervalId: null,
-      scrollInterval: 3000, // change this value to adjust scrolling interval
+      scrollInterval: 4000, // change this value to adjust scrolling interval
     };
   },
   mounted() {
@@ -80,7 +80,7 @@ export default {
 
 .carousel img {
   width: 100%;
-  height: 100%;
+  height: 750px;
   object-fit: cover;
 }
 
